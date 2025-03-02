@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>{{message}}</h1>
+  <form action="/submit" method="post">
+    <label for="studentID">Student ID:</label>
+    <input type="number" id="studentID" name="studentID" required>
+    <br>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <label for="bday">Birthday:</label>
+    <input type="date" id="bday" name="bday" required>
+    <br>
+    <label for="email">E-mail: </label>
+    <input type="email" id="email" name="email" required>
+    <br>
+    <label for="mobile">Mobile Phone:</label>
+    <input type="text" id="mobile" name="mobile" required>
+    <br>
+    <span>Intern / Extern: </span>
+    <input type="radio" id="IE" name="IE" value="Intern" required>
+    <label for="Intern">Intern</label>
+    <input type="radio" id="IE" name="IE" value="Extern" required>
+    <label for="Extern">Extern</label>
+    <br>
+    <label for="club">Choose a club:</label>
+    <select name="club" id="club">
+        <option value="Tomorrow">Tomorrow™️</option>
+        <option value="Math Club">Math Club</option>
+        <option value="PYHS">PYHS</option>
+        <option value="Flux">Flux</option>
+        <option value="Kamalayan">Kamalayan</option>
+    </select>
+    <br>
+    <label for="reason">Why do you want to join this club?</label> <br>
+    <textarea id="reason" name="reason" rows="4" cols="50"></textarea>
+    <br>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+</body>
+</html>
