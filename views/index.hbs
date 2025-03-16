@@ -6,30 +6,60 @@
   <title>{{title}}</title>
   <link rel="stylesheet" href="/styles.css">
 </head>
+<style>
+  input:focus {
+    background-color: rgba(187, 240, 222, 0.596);
+    font-style: italic;
+  }
+  div {
+    width: 50%;
+    padding: 10px;
+    border-width: 4px;
+    margin: auto;
+  }
+  textarea:focus{
+    background-color: aliceblue;
+    font-style: italic;
+  }
+  .button {
+    margin-left: 50%;
+  }
+  input, textarea {
+    font-family:'Times New Roman', Times, serif;
+  }
+</style>
 <body>
   <h1>{{message}}</h1>
   <form action="/submit" method="post">
+  <div id="bi">
+  <fieldset id="basicInfo">
+    <legend>Basic Info:</legend>
     <label for="studentID">Student ID:</label>
     <input type="number" id="studentID" name="studentID" required>
-    <br>
+    <br><br>
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
-    <br>
+    <br><br>
     <label for="bday">Birthday:</label>
     <input type="date" id="bday" name="bday" required>
-    <br>
+    <br><br>
     <label for="email">E-mail: </label>
     <input type="email" id="email" name="email" required>
-    <br>
+    <br><br>
+  </fieldset>
+  </div>
+  <div id="md">
+  <fieldset id="moreDetails">
+    <legend>More Stuff:</legend>
     <label for="mobile">Mobile Phone:</label>
     <input type="text" id="mobile" name="mobile" required>
-    <br>
+    <br><br>
     <span>Intern / Extern: </span>
     <input type="radio" id="IE" name="IE" value="Intern" required>
     <label for="Intern">Intern</label>
     <input type="radio" id="IE" name="IE" value="Extern" required>
     <label for="Extern">Extern</label>
-    <br>
+    <br><br>
     <label for="club">Choose a club:</label>
     <select name="club" id="club">
         <option value="Tomorrow">Tomorrow™️</option>
@@ -38,12 +68,16 @@
         <option value="Flux">Flux</option>
         <option value="Kamalayan">Kamalayan</option>
     </select>
-    <br>
+    <br><br>
     <label for="reason">Why do you want to join this club?</label> <br>
     <textarea id="reason" name="reason" rows="4" cols="50"></textarea>
-    <br>
+    <br><br>
+  </fieldset>
+  </div>
+  <div id="button">
     <button type="submit">Submit</button>
     <button type="reset">Reset</button>
+  </div>
   </form>
 </body>
 </html>
